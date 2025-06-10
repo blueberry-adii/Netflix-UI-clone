@@ -1,9 +1,9 @@
 function App() {
   return (
     <>
-      <div className="absolute w-full h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[888px] bg-[radial-gradient(ellipse_at_center,_rgba(70,21,24),_transparent)] -z-30"></div>
-      <section className="flex flex-col relative h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[888px] px-[2px]  max-w-[1920px] mx-auto items-center">
-        <div className="absolute w-full max-w-[1920px] h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[888px] bg-black -z-30"></div>
+      <section className="flex flex-col relative h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] px-[2px] max-w-[1920px] mx-auto items-center">
+        <div className="absolute w-[100%] rounded-[10%] h-[600px] min-[960px]:h-[690px] min-[1280px]:h-[760px] shadow-2xl shadow-red-400 -z-30"></div>
+        <div className="absolute w-full max-w-[1920px] h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] bg-black -z-30"></div>
         <header className="flex w-full justify-between py-6 min-[960px]:py-5 min-[1280px]:py-6 px-6 min-[600px]:px-8 min-[960px]:px-20 min-[1280px]:px-36 min-[1920px]:max-w-screen-xl z-20">
           <svg
             viewBox="0 0 111 30"
@@ -84,10 +84,54 @@ function App() {
             </button>
           </div>
         </header>
+        <main className="w-full px-8 h-[450px] min-[960px]:h-[500px] min-[1280px]:h-[600px] z-20 flex flex-col items-center justify-center gap-4 max-[960px]:gap-2">
+          <h1 className="text-6xl max-[1280px]:text-[40px] max-[960px]:text-[32px] font-sans font-bold max-w-[700px] max-[1280px]:max-w-[500px] max-[960px]:max-w-[450px] text-center">
+            Unlimited movies, TV shows and more
+          </h1>
+          <p className="text-xl max-[1280px]:text-lg font-sans font-bold max-[1280px]:font-normal text-center">
+            Starts at ₹149. Cancel at any time.
+          </p>
+          <h3 className="text-lg font-sans mt-4 max-[960px]:mt-1 max-[1280px]:max-w-[500px] text-center">
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </h3>
+          <div className="flex flex-row max-[600px]:flex-col gap-2 max-[600px]:gap-3 w-full mx-auto justify-center items-center">
+            <input
+              type="email"
+              id="email"
+              class="text-md h-12 w-[350px] max-[600px]:w-full outline-none font-sans rounded-sm block px-5 py-2.5 bg-gray-950/45 border-[1px] border-zinc-400/60 placeholder-gray-400 text-white"
+              placeholder="Email Address"
+              required
+            />
+            <button
+              type="submit"
+              className="text-white font-bold flex items-center justify-between font-sans rounded-sm text-xl min-w-46 h-12 sm:w-auto px-5 py-2.5 bg-red-600 hover:bg-red-700 transition-colors ease-in-out duration-300"
+            >
+              Get Started
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                data-icon="ChevronRightStandard"
+                aria-hidden="true"
+              >
+                <path
+                  fill="currentColor"
+                  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </main>
         <div className="absolute w-full h-48 inset-0 bg-gradient-to-b from-black/90 to-transparent z-10"></div>
-        <div className="absolute w-full inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-        <div className="flex h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[888px] w-full bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/6863f6e8-d419-414d-b5b9-7ef657e67ce4/web/IN-en-20250602-TRIFECTA-perspective_27a3fdfa-126f-4148-b153-55d60b51be6a_large.jpg')] bg-cover bg-center opacity-50 absolute -z-10 top-0 max-w-[1920px] mx-auto"></div>
-        <div className="w-full h-28 border-red-500 border-t-6 rounded-t-[100%] absolute bottom-0 bg-black z-30"></div>
+        <div className="absolute w-full inset-0 bg-gradient-to-t from-black/90 to-black/15 z-10"></div>
+        <div className="flex h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] w-full bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/6863f6e8-d419-414d-b5b9-7ef657e67ce4/web/IN-en-20250602-TRIFECTA-perspective_27a3fdfa-126f-4148-b153-55d60b51be6a_large.jpg')] bg-cover bg-center opacity-50 absolute -z-10 top-0 max-w-[1920px] mx-auto"></div>
+        <div className="w-full h-30 border-red-500 opacity-75 border-t-4 max-[500px]:rounded-t-[30%] max-[800px]:rounded-t-[40%] rounded-t-[100%] absolute bottom-0 bg-black z-30"></div>
       </section>
     </>
   );
