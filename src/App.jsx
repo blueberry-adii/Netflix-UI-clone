@@ -1,8 +1,10 @@
 function App() {
   return (
     <>
-      <section className="flex flex-col relative h-screen max-w-[1920px] mx-auto py-4 min-[960px]:py-6 items-center">
-        <header className="flex w-full justify-between px-6 min-[960px]:px-10 max-w-screen-xl">
+      <div className="absolute w-full h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[888px] bg-[radial-gradient(ellipse_at_center,_rgba(70,21,24),_transparent)] -z-30"></div>
+      <section className="flex flex-col relative h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[888px] px-[2px]  max-w-[1920px] mx-auto items-center">
+        <div className="absolute w-full max-w-[1920px] h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[888px] bg-black -z-30"></div>
+        <header className="flex w-full justify-between py-6 min-[960px]:py-5 min-[1280px]:py-6 px-6 min-[600px]:px-8 min-[960px]:px-20 min-[1280px]:px-36 min-[1920px]:max-w-screen-xl z-20">
           <svg
             viewBox="0 0 111 30"
             version="1.1"
@@ -38,14 +40,14 @@ function App() {
                 ></path>
               </svg>
               <select
-                className="w-full h-full appearance-none text-transparent min-[600px]:text-white pb-[2px] border-2 border-[#605f5f] focus:outline-1 focus:outline-white rounded-sm"
+                className="w-full h-full bg-zinc-900/80 appearance-none text-transparent min-[600px]:text-white pb-[2px] border-1 border-[#605f5f] focus:outline-1 focus:outline-white rounded-sm"
                 name="LanguageSelect"
               >
                 <option
                   lang="en"
                   label="English"
                   value="en-IN"
-                  className="text-center text-black"
+                  className="text-center bg-white text-black"
                 >
                   English
                 </option>
@@ -53,7 +55,7 @@ function App() {
                   lang="hi"
                   label="हिन्दी"
                   value="hi-IN"
-                  className="text-center text-black"
+                  className="text-center bg-white text-black"
                 >
                   हिन्दी
                 </option>
@@ -82,15 +84,10 @@ function App() {
             </button>
           </div>
         </header>
-        <div className="flex absolute -z-10 -top-5 left-0 max-w-[1920px] mx-auto">
-          <img
-            src="https://assets.nflxext.com/ffe/siteui/vlv3/6863f6e8-d419-414d-b5b9-7ef657e67ce4/web/IN-en-20250602-TRIFECTA-perspective_27a3fdfa-126f-4148-b153-55d60b51be6a_large.jpg"
-            srcset="https://assets.nflxext.com/ffe/siteui/vlv3/6863f6e8-d419-414d-b5b9-7ef657e67ce4/web/IN-en-20250602-TRIFECTA-perspective_27a3fdfa-126f-4148-b153-55d60b51be6a_large.jpg 2000w, https://assets.nflxext.com/ffe/siteui/vlv3/6863f6e8-d419-414d-b5b9-7ef657e67ce4/web/IN-en-20250602-TRIFECTA-perspective_27a3fdfa-126f-4148-b153-55d60b51be6a_medium.jpg 1279w, https://assets.nflxext.com/ffe/siteui/vlv3/6863f6e8-d419-414d-b5b9-7ef657e67ce4/web/IN-en-20250602-TRIFECTA-perspective_27a3fdfa-126f-4148-b153-55d60b51be6a_small.jpg 959w"
-            alt=""
-            aria-hidden="true"
-            className="opacity-25"
-          ></img>
-        </div>
+        <div className="absolute w-full h-48 inset-0 bg-gradient-to-b from-black/90 to-transparent z-10"></div>
+        <div className="absolute w-full inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+        <div className="flex h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[888px] w-full bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/6863f6e8-d419-414d-b5b9-7ef657e67ce4/web/IN-en-20250602-TRIFECTA-perspective_27a3fdfa-126f-4148-b153-55d60b51be6a_large.jpg')] bg-cover bg-center opacity-50 absolute -z-10 top-0 max-w-[1920px] mx-auto"></div>
+        <div className="w-full h-28 border-red-500 border-t-6 rounded-t-[100%] absolute bottom-0 bg-black z-30"></div>
       </section>
     </>
   );
