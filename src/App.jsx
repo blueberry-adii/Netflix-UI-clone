@@ -137,13 +137,15 @@ function App() {
         <div className="flex h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] w-full bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/IN-en-20250609-TRIFECTA-perspective_32b70b51-20d4-46db-8a1a-3d5428be5f0e_large.jpg')] bg-cover bg-center opacity-50 absolute -z-10 top-0 max-w-[1920px] mx-auto"></div>
         <div className="xl:w-[1920px] md:w-[1280px] w-[888px] p-15 xl:p-15 border-red-500 opacity-75 border-t-4 rounded-t-[100%] absolute bottom-0 bg-black z-30 "></div>
       </section>
-      <section className="flex flex-col -top-16 overflow-x-hidden relative h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] px-[2px] max-w-[1920px] mx-auto items-center z-50">
-        <div className="w-full max-w-[1212px]">
-          <h2 className="text-2xl min-[1920px]:text-[32px] font-sans font-semibold">
+      <section className="flex flex-col -top-16 overflow-x-hidden relative h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] px-[354px] max-[1920px]:px-[148px] max-[1280px]:px-[80px] max-[960px]:px-[32px] max-[600px]:px-[24px] max-w-[1920px] mx-auto items-center z-50">
+        <div className="w-full min-[1920px]:max-w-[1212px] mb-4">
+          <h2 className="text-[26px] min-[1920px]:text-[32px] font-sans font-bold">
             Trending Now
           </h2>
         </div>
-        <Swiper></Swiper>
+        <div className="w-full ">
+          <Swiper></Swiper>
+        </div>
       </section>
     </>
   );
