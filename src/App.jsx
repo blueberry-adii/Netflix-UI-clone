@@ -1,8 +1,12 @@
+import Swiper from "./components/Swiper";
+
 function App() {
   return (
     <>
-      <section className="flex flex-col relative h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] px-[2px] max-w-[1920px] mx-auto items-center">
-        <div className="absolute w-[100%] rounded-[10%] h-[600px] min-[960px]:h-[690px] min-[1280px]:h-[760px] shadow-2xl shadow-red-400 -z-30"></div>
+      <div className="absolute w-full flex justify-center">
+        <div className="absolute w-full max-w-[1920px] mx-auto rounded-[10%] h-[600px] min-[960px]:h-[690px] min-[1280px]:h-[760px] shadow-2xl shadow-red-400 -z-30"></div>
+      </div>
+      <section className="flex flex-col overflow-x-hidden relative h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] px-[2px] max-w-[1920px] mx-auto items-center">
         <div className="absolute w-full max-w-[1920px] h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] bg-black -z-30"></div>
         <header className="flex w-full justify-between py-6 min-[960px]:py-5 min-[1280px]:py-6 px-6 min-[600px]:px-8 min-[960px]:px-20 min-[1280px]:px-36 min-[1920px]:max-w-screen-xl z-20">
           <svg
@@ -131,7 +135,15 @@ function App() {
         <div className="absolute w-full h-48 inset-0 bg-gradient-to-b from-black/90 to-transparent z-10"></div>
         <div className="absolute w-full inset-0 bg-gradient-to-t from-black/90 to-black/15 z-10"></div>
         <div className="flex h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] w-full bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/IN-en-20250609-TRIFECTA-perspective_32b70b51-20d4-46db-8a1a-3d5428be5f0e_large.jpg')] bg-cover bg-center opacity-50 absolute -z-10 top-0 max-w-[1920px] mx-auto"></div>
-        <div className="w-full h-30 border-red-500 opacity-75 border-t-4 max-[500px]:rounded-t-[30%] max-[800px]:rounded-t-[40%] rounded-t-[100%] absolute bottom-0 bg-black z-30"></div>
+        <div className="xl:w-[1920px] md:w-[1280px] w-[888px] p-15 xl:p-15 border-red-500 opacity-75 border-t-4 rounded-t-[100%] absolute bottom-0 bg-black z-30 "></div>
+      </section>
+      <section className="flex flex-col -top-16 overflow-x-hidden relative h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] px-[2px] max-w-[1920px] mx-auto items-center z-50">
+        <div className="w-full max-w-[1212px]">
+          <h2 className="text-2xl min-[1920px]:text-[32px] font-sans font-semibold">
+            Trending Now
+          </h2>
+        </div>
+        <Swiper></Swiper>
       </section>
     </>
   );
