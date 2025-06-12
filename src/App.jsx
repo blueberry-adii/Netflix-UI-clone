@@ -139,7 +139,7 @@ function App() {
       </section>
       <section className="flex flex-col -top-16 overflow-x-hidden relative h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] px-[354px] max-[1920px]:px-[148px] max-[1280px]:px-[80px] max-[960px]:px-[32px] max-[600px]:px-[24px] max-w-[1920px] mx-auto items-center z-50">
         <div className="w-full min-[1920px]:max-w-[1212px] mb-4">
-          <h2 className="text-[26px] min-[1920px]:text-[32px] font-sans font-bold">
+          <h2 className="text-[19px] min-[960px]:text-[25px] min-[1920px]:text-[32px] font-sans font-bold">
             Trending Now
           </h2>
         </div>

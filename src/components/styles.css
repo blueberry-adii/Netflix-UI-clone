@@ -15,7 +15,7 @@
   padding: 8px 22px;
   justify-content: center;
   align-items: center;
-  transition: all ease-in-out 0.25s;
+  transition: scale ease-in-out 0.25s;
 }
 
 .swiper-slide:hover {
