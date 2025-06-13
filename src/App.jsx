@@ -6,7 +6,7 @@ function App() {
       <div className="absolute w-full flex justify-center">
         <div className="absolute w-full max-w-[1920px] mx-auto rounded-[10%] h-[600px] min-[960px]:h-[690px] min-[1280px]:h-[760px] shadow-2xl shadow-red-400 -z-30"></div>
       </div>
-      <section className="flex flex-col overflow-x-hidden relative h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] px-[2px] max-w-[1920px] mx-auto items-center">
+      <section className="flex flex-col overflow-x-hidden relative h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] px-[2px] max-w-[1920px] mx-auto items-center -z-1">
         <div className="absolute w-full max-w-[1920px] h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] bg-black -z-30"></div>
         <header className="flex w-full justify-between py-6 min-[960px]:py-5 min-[1280px]:py-6 px-6 min-[600px]:px-8 min-[960px]:px-20 min-[1280px]:px-36 min-[1920px]:max-w-screen-xl z-20">
           <svg
@@ -135,11 +135,18 @@ function App() {
         <div className="absolute w-full h-48 inset-0 bg-gradient-to-b from-black/90 to-transparent z-10"></div>
         <div className="absolute w-full inset-0 bg-gradient-to-t from-black/90 to-black/15 z-10"></div>
         <div className="flex h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] w-full bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/IN-en-20250609-TRIFECTA-perspective_32b70b51-20d4-46db-8a1a-3d5428be5f0e_large.jpg')] bg-cover bg-center opacity-50 absolute -z-10 top-0 max-w-[1920px] mx-auto"></div>
-        <div className="xl:w-[1920px] md:w-[1280px] w-[888px] p-15 xl:p-15 border-red-500 opacity-75 border-t-4 rounded-t-[100%] absolute bottom-0 bg-black z-30 "></div>
       </section>
-      <section className="flex flex-col -top-16 overflow-x-hidden relative h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] px-[354px] max-[1920px]:px-[148px] max-[1280px]:px-[80px] max-[960px]:px-[32px] max-[600px]:px-[24px] max-w-[1920px] mx-auto items-center z-50">
+      <section className="-mt-30 max-w-[1920px] mx-auto">
+        <div className="container">
+          <div className="curve-container">
+            <div className="curve w-[200%] min-[600px]:w-[180%] min-[960px]:w-[150%] min-[1280px]:w-[130%] left-[-50%] min-[600px]:left-[-40%] min-[960px]:left-[-25%] min-[1280px]:left-[-15%]"></div>
+          </div>
+          <div className="box2 mt-[1.375em] min-[600px]:mt-[1.875rem] min-[960px]:mt-[1.25rem] min-[1280px]:mt-[1.375rem]"></div>
+        </div>
+      </section>
+      <section className="flex flex-col -top-12 overflow-x-hidden relative h-[664px] min-[960px]:h-[760px] min-[1280px]:h-[830px] px-[354px] max-[1920px]:px-[148px] max-[1280px]:px-[80px] max-[960px]:px-[32px] max-[600px]:px-[24px] max-w-[1920px] mx-auto items-center z-50">
         <div className="w-full min-[1920px]:max-w-[1212px] mb-4">
-          <h2 className="text-[19px] min-[960px]:text-[25px] min-[1920px]:text-[32px] font-sans font-bold">
+          <h2 className="text-[18px] min-[960px]:text-[24px] min-[1920px]:text-[32px] font-sans font-bold">
             Trending Now
           </h2>
         </div>
