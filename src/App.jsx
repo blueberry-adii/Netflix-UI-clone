@@ -115,7 +115,7 @@ function App() {
             />
             <button
               type="submit"
-              className="text-white font-bold flex items-center justify-between font-sans rounded-sm text-xl min-w-46 h-12 sm:w-auto px-5 py-2.5 bg-red-600 hover:bg-red-700 transition-colors ease-in-out duration-300"
+              className="text-white cursor-pointer font-bold flex items-center justify-between font-sans rounded-sm text-xl min-w-46 h-12 sm:w-auto px-5 py-2.5 bg-red-600 hover:bg-red-700 transition-colors ease-in-out duration-300"
             >
               Get Started
               <svg
