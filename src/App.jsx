@@ -1114,6 +1114,46 @@ function App() {
           </ul>
         </div>
       </section>
+      <section className="flex flex-col -top-12 overflow-x-hidden relative px-[354px] max-[1920px]:px-[148px] max-[1280px]:px-[80px] max-[960px]:px-[32px] max-[600px]:px-[24px] max-w-[1920px] mx-auto items-center z-50">
+        <div className="flex flex-col items-center w-full">
+          <h3 className="text-[16px] mb-4">
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </h3>
+          <form className="flex gap-2 w-full mx-auto justify-center items-center">
+            <input
+              type="email"
+              id="email"
+              class="text-md h-16 w-[454px] max-[960px]:w-full outline-none font-sans rounded-sm block px-5 py-2.5 bg-gray-950/45 border-[1px] border-zinc-400/60 placeholder-gray-400 text-white"
+              placeholder="Email Address"
+              required
+            />
+            <button
+              type="submit"
+              className="text-white cursor-pointer font-bold flex items-center justify-between font-sans rounded-sm text-xl min-w-46 h-16 sm:w-auto px-5 py-2.5 bg-red-600 hover:bg-red-700 transition-colors ease-in-out duration-300"
+            >
+              Get Started
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                data-icon="ChevronRightStandard"
+                aria-hidden="true"
+              >
+                <path
+                  fill="currentColor"
+                  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </section>
     </>
   );
 }
