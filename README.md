@@ -6,7 +6,7 @@ A fully responsive Netflix homepage UI clone built using **React** and **Tailwin
 
 ## 🚀 Demo
 
-🌐 [Live Preview](https://netlfix-clone.netlify.app/)
+🌐 [Live Preview](#) _(https://netlfix-clone.netlify.app/)_  
 📸 See Screenshots in the `/screenshots` folder
 
 ---
