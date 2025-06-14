@@ -1,6 +1,12 @@
 import Swiper from "./components/Swiper";
+import React, { useState } from "react";
 
 function App() {
+  const [activeKey, setActiveKey] = useState(null);
+
+  const handleClick = (key) => {
+    setActiveKey((prevKey) => (prevKey === key ? null : key));
+  };
   return (
     <>
       <div className="absolute w-full flex justify-center">
@@ -841,6 +847,268 @@ function App() {
                     </radialGradient>
                   </defs>
                 </svg>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div className="w-full min-[1920px]:max-w-[1212px] mb-12">
+          <h2 className="text-[18px] min-[960px]:text-[24px] min-[1920px]:text-[32px] font-sans font-bold mb-4">
+            Frequently Asked Questions
+          </h2>
+          <ul>
+            <li className="relative mb-2">
+              <button
+                className="text-white bg-[#2d2d2d] hover:bg-[#404040] w-full font-medium p-6 text-2xl max-[960px]:text-lg text-center inline-flex items-center justify-between transition-colors ease-in-out duration-150 cursor-pointer"
+                type="button"
+                onClick={() => handleClick("a")}
+              >
+                What is Netflix?
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  role="img"
+                  viewBox="0 0 36 36"
+                  width="36"
+                  height="36"
+                  data-icon="PlusLarge"
+                  aria-hidden="true"
+                  className={activeKey === "a" ? "rotate-45" : ""}
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                className={
+                  "-z-10 mt-[1px] text-white bg-[#2d2d2d] overflow-hidden shadow-sm w-full text-2xl max-[960px]:text-lg flex flex-col items-center transition-all ease-in-out duration-300" +
+                  (activeKey === "a" ? " max-h-[1000px]" : " max-h-0")
+                }
+              >
+                <p className="px-6 pt-6 pb-3">
+                  Netflix is a streaming service that offers a wide variety of
+                  award-winning TV shows, movies, anime, documentaries and more
+                  – on thousands of internet-connected devices.
+                </p>
+                <p className="px-6 pt-3 pb-6">
+                  You can watch as much as you want, whenever you want, without
+                  a single ad – all for one low monthly price. There's always
+                  something new to discover, and new TV shows and movies are
+                  added every week!
+                </p>
+              </div>
+            </li>
+            <li className="relative mb-2">
+              <button
+                className="text-white bg-[#2d2d2d] hover:bg-[#404040] w-full font-medium p-6 text-2xl max-[960px]:text-lg text-center inline-flex items-center justify-between transition-colors ease-in-out duration-150 cursor-pointer"
+                type="button"
+                onClick={() => handleClick("b")}
+              >
+                How much does Netflix cost?
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  role="img"
+                  viewBox="0 0 36 36"
+                  width="36"
+                  height="36"
+                  data-icon="PlusLarge"
+                  aria-hidden="true"
+                  className={activeKey === "b" ? "rotate-45" : ""}
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                className={
+                  "-z-10 mt-[1px] text-white bg-[#2d2d2d] overflow-hidden shadow-sm w-full text-2xl max-[960px]:text-lg flex flex-col items-center transition-all ease-in-out duration-300" +
+                  (activeKey === "b" ? " max-h-[1000px]" : " max-h-0")
+                }
+              >
+                <p className="p-6">
+                  Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+                  streaming device, all for one fixed monthly fee. Plans range
+                  from ₹149 to ₹649 a month. No extra costs, no contracts.
+                </p>
+              </div>
+            </li>
+            <li className="relative mb-2">
+              <button
+                className="text-white bg-[#2d2d2d] hover:bg-[#404040] w-full font-medium p-6 text-2xl max-[960px]:text-lg text-center inline-flex items-center justify-between transition-colors ease-in-out duration-150 cursor-pointer"
+                type="button"
+                onClick={() => handleClick("c")}
+              >
+                Where can I watch?
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  role="img"
+                  viewBox="0 0 36 36"
+                  width="36"
+                  height="36"
+                  data-icon="PlusLarge"
+                  aria-hidden="true"
+                  className={activeKey === "c" ? "rotate-45" : ""}
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                className={
+                  "-z-10 mt-[1px] text-white bg-[#2d2d2d] overflow-hidden shadow-sm w-full text-2xl max-[960px]:text-lg flex flex-col items-center transition-all ease-in-out duration-300" +
+                  (activeKey === "c" ? " max-h-[1000px]" : " max-h-0")
+                }
+              >
+                <p className="px-6 pt-6 pb-3">
+                  Watch anywhere, anytime. Sign in with your Netflix account to
+                  watch instantly on the web at netflix.com from your personal
+                  computer or on any internet-connected device that offers the
+                  Netflix app, including smart TVs, smartphones, tablets,
+                  streaming media players and game consoles.
+                </p>
+                <p className="px-6 pt-3 pb-6">
+                  You can also download your favourite shows with the iOS or
+                  Android app. Use downloads to watch while you're on the go and
+                  without an internet connection. Take Netflix with you
+                  anywhere.
+                </p>
+              </div>
+            </li>
+            <li className="relative mb-2">
+              <button
+                className="text-white bg-[#2d2d2d] hover:bg-[#404040] w-full font-medium p-6 text-2xl max-[960px]:text-lg text-center inline-flex items-center justify-between transition-colors ease-in-out duration-150 cursor-pointer"
+                type="button"
+                onClick={() => handleClick("d")}
+              >
+                How do I cancel?
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  role="img"
+                  viewBox="0 0 36 36"
+                  width="36"
+                  height="36"
+                  data-icon="PlusLarge"
+                  aria-hidden="true"
+                  className={activeKey === "d" ? "rotate-45" : ""}
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                className={
+                  "-z-10 mt-[1px] text-white bg-[#2d2d2d] overflow-hidden shadow-sm w-full text-2xl max-[960px]:text-lg flex flex-col items-center transition-all ease-in-out duration-300" +
+                  (activeKey === "d" ? " max-h-[1000px]" : " max-h-0")
+                }
+              >
+                <p className="p-6">
+                  Netflix is flexible. There are no annoying contracts and no
+                  commitments. You can easily cancel your account online in two
+                  clicks. There are no cancellation fees – start or stop your
+                  account anytime.
+                </p>
+              </div>
+            </li>
+            <li className="relative mb-2">
+              <button
+                className="text-white bg-[#2d2d2d] hover:bg-[#404040] w-full font-medium p-6 text-2xl max-[960px]:text-lg text-center inline-flex items-center justify-between transition-colors ease-in-out duration-150 cursor-pointer"
+                type="button"
+                onClick={() => handleClick("e")}
+              >
+                What can I watch on Netflix?
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  role="img"
+                  viewBox="0 0 36 36"
+                  width="36"
+                  height="36"
+                  data-icon="PlusLarge"
+                  aria-hidden="true"
+                  className={activeKey === "e" ? "rotate-45" : ""}
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                className={
+                  "-z-10 mt-[1px] text-white bg-[#2d2d2d] overflow-hidden shadow-sm w-full text-2xl max-[960px]:text-lg flex flex-col items-center transition-all ease-in-out duration-300" +
+                  (activeKey === "e" ? " max-h-[1000px]" : " max-h-0")
+                }
+              >
+                <p className="p-6">
+                  Netflix has an extensive library of feature films,
+                  documentaries, TV shows, anime, award-winning Netflix
+                  originals, and more. Watch as much as you want, anytime you
+                  want.
+                </p>
+              </div>
+            </li>
+            <li className="relative mb-2">
+              <button
+                className="text-white bg-[#2d2d2d] hover:bg-[#404040] w-full font-medium p-6 text-2xl max-[960px]:text-lg text-center inline-flex items-center justify-between transition-colors ease-in-out duration-150 cursor-pointer"
+                type="button"
+                onClick={() => handleClick("f")}
+              >
+                Is Netflix good for kids?
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  role="img"
+                  viewBox="0 0 36 36"
+                  width="36"
+                  height="36"
+                  data-icon="PlusLarge"
+                  aria-hidden="true"
+                  className={activeKey === "f" ? "rotate-45" : ""}
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                className={
+                  "-z-10 mt-[1px] text-white bg-[#2d2d2d] overflow-hidden shadow-sm w-full text-2xl max-[960px]:text-lg flex flex-col items-center transition-all ease-in-out duration-300" +
+                  (activeKey === "f" ? " max-h-[1000px]" : " max-h-0")
+                }
+              >
+                <p className="px-6 pt-6 pb-3">
+                  The Netflix Kids experience is included in your membership to
+                  give parents control while kids enjoy family-friendly TV shows
+                  and films in their own space.
+                </p>
+                <p className="px-6 pt-3 pb-6">
+                  Kids profiles come with PIN-protected parental controls that
+                  let you restrict the maturity rating of content kids can watch
+                  and block specific titles you don’t want kids to see.
+                </p>
               </div>
             </li>
           </ul>
