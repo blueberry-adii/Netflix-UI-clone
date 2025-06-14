@@ -78,3 +78,7 @@ body {
   z-index: 2;
   text-align: center;
 }
+
+.gradient-card {
+  background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+}
