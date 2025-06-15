@@ -5,7 +5,7 @@ export default function Button({ textContent, svg, small }) {
       className={`text-white cursor-pointer font-bold flex items-center font-sans rounded-sm bg-red-600 hover:bg-red-700 transition-colors ease-in-out duration-300 ${
         small
           ? `justify-center focus:outline-none text-sm px-4 pt-1.5 pb-2`
-          : `justify-between text-xl px-5 py-2.5 min-w-46 h-16 max-[600px]:h-12 sm:w-auto`
+          : `justify-between text-xl px-5 py-2.5 min-w-46 h-15 max-[600px]:h-12 sm:w-auto`
       }`}
     >
       {textContent}
