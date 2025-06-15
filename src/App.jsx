@@ -155,7 +155,7 @@ function App() {
         </p>
       </section>
       <div
-        className={`sm:hidden w-full bg-gradient-to-b from-transparent to-black pointer-events-none fixed bottom-0 px-6 pb-8 pt-36 shadow-black shadow-2xl transition-all ease-in-out duration-300 left-1/2 z-100 ${
+        className={`sm:hidden w-full bg-gradient-to-b from-transparent to-black pointer-events-none fixed bottom-0 px-6 pb-8 pt-36 shadow-black shadow-2xl transition-all ease-in-out duration-300 left-1/2 -translate-x-1/2 z-100 ${
           showButton ? "" : "translate-y-8 opacity-0"
         }`}
       >
