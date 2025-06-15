@@ -1,5 +1,5 @@
 import Swiper from "./components/Swiper";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Button from "./components/Button";
 import Input from "./components/Input";
 import Language from "./components/Language";
@@ -9,6 +9,47 @@ import FAQ from "./components/FAQ";
 import AnchorList from "./components/AnchorList";
 
 function App() {
+  const startRef = useRef(null);
+  const endRef = useRef(null);
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    let startVisible = false;
+    let endVisible = false;
+
+    const checkVisibility = () => {
+      setShowButton(startVisible && !endVisible);
+    };
+
+    const startObserver = new IntersectionObserver(
+      ([entry]) => {
+        startVisible = entry.isIntersecting;
+        checkVisibility();
+      },
+      {
+        threshold: 0.25,
+      }
+    );
+
+    const endObserver = new IntersectionObserver(
+      ([entry]) => {
+        endVisible = entry.isIntersecting;
+        checkVisibility();
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (startRef.current) startObserver.observe(startRef.current);
+    if (endRef.current) endObserver.observe(endRef.current);
+
+    return () => {
+      if (startRef.current) startObserver.unobserve(startRef.current);
+      if (endRef.current) endObserver.unobserve(endRef.current);
+    };
+  }, []);
+
   return (
     <>
       <div className="absolute w-full flex justify-center">
@@ -64,7 +105,10 @@ function App() {
           <div className="box2 mt-[1.375em] min-[600px]:mt-[1.875rem] min-[960px]:mt-[1.25rem] min-[1280px]:mt-[1.375rem]"></div>
         </div>
       </section>
-      <section className="flex flex-col -top-12 overflow-x-hidden relative px-[354px] max-[1920px]:px-[148px] max-[1280px]:px-[80px] max-[960px]:px-[32px] max-[600px]:px-[24px] max-w-[1920px] mx-auto items-center z-50">
+      <section
+        ref={startRef}
+        className="flex flex-col -top-12 overflow-x-hidden relative px-[354px] max-[1920px]:px-[148px] max-[1280px]:px-[80px] max-[960px]:px-[32px] max-[600px]:px-[24px] max-w-[1920px] mx-auto items-center z-50"
+      >
         <div className="w-full min-[1920px]:max-w-[1212px] mb-4">
           <Heading2 textContent="Trending Now"></Heading2>
         </div>
@@ -80,7 +124,10 @@ function App() {
           <FAQ></FAQ>
         </div>
       </section>
-      <section className="flex flex-col -top-12 overflow-x-hidden relative px-[354px] max-[1920px]:px-[148px] max-[1280px]:px-[80px] max-[960px]:px-[32px] max-[600px]:px-[24px] max-w-[1920px] mx-auto items-center z-50">
+      <section
+        ref={endRef}
+        className="flex flex-col -top-12 overflow-x-hidden relative px-[354px] max-[1920px]:px-[148px] max-[1280px]:px-[80px] max-[960px]:px-[32px] max-[600px]:px-[24px] max-w-[1920px] mx-auto items-center z-50"
+      >
         <div className="flex flex-col items-center w-full">
           <h3 className="text-[16px] mb-4">
             Ready to watch? Enter your email to create or restart your
@@ -107,6 +154,17 @@ function App() {
           Netflix Clone - Aditya Prasad
         </p>
       </section>
+      <div
+        className={`sm:hidden w-full bg-gradient-to-b from-transparent to-black pointer-events-none sticky bottom-0 px-6 pb-6 pt-36 shadow-black shadow-2xl transition-all ease-in-out duration-200 left-1/2 z-100 ${
+          showButton ? "" : "translate-y-8 opacity-0"
+        }`}
+      >
+        <button
+          className={`justify-center pointer-events-auto left-1/2 z-100 h-10 w-full text-white cursor-pointer font-bold flex items-center font-sans rounded-sm bg-red-600 hover:bg-red-700 transition-colors ease-in-out duration-300 `}
+        >
+          Get Started
+        </button>
+      </div>
     </>
   );
 }
