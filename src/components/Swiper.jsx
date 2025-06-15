@@ -33,7 +33,7 @@ export default function App() {
               <span
                 className={`h-[300px] w-[214px] max-[1920px]:h-[252px] max-[1920px]:w-[180px] max-[1280px]:h-[196px] max-[1280px]:w-[140px] max-[960px]:h-[156.8px] max-[960px]:w-[112px] rounded-md bg-cover ${card.bg}`}
               ></span>
-              <div className="text-[64px] min-[1280px]:text-[100px] min-[1920px]:text-[120px] font-extrabold absolute bottom-0 left-0">
+              <div className="text-[64px] min-[1280px]:text-[100px] min-[1920px]:text-[120px] font-extrabold absolute bottom-0 left-0 [text-shadow:_0px_0px_2px_#ffffff,_0px_0px_4px_#ffffff,_0px_0px_6px_#ffffff]">
                 {i + 1}
               </div>
             </SwiperSlide>
