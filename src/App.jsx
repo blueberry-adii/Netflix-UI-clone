@@ -40,10 +40,10 @@ function App() {
           <h1 className="text-6xl max-[1280px]:text-[40px] max-[960px]:text-[32px] font-sans font-bold max-w-[700px] max-[1280px]:max-w-[500px] max-[960px]:max-w-[450px] text-center">
             Unlimited movies, TV shows and more
           </h1>
-          <p className="text-xl max-[1280px]:text-lg font-sans font-semibold max-[1280px]:font-normal text-center">
+          <p className="text-xl max-[1280px]:text-[16px] font-sans font-semibold max-[1280px]:font-normal text-center">
             Starts at ₹149. Cancel at any time.
           </p>
-          <h3 className="text-lg font-sans mt-4 max-[960px]:mt-1 max-[1280px]:max-w-[500px] text-center">
+          <h3 className="text-[16px] font-sans mt-4 max-[960px]:mt-1 max-[1280px]:max-w-[500px] text-center">
             Ready to watch? Enter your email to create or restart your
             membership.
           </h3>

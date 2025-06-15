@@ -43,8 +43,8 @@ export default function FAQ() {
                 (activeKey === card.key ? " max-h-[1000px]" : " max-h-0")
               }
             >
-              <p className="px-6 pt-6 pb-3">{card.msg1}</p>
-              <p className="px-6 pt-3 pb-6">{card.msg2}</p>
+              <p className="px-6 pt-6 pb-6">{card.msg1}</p>
+              {card.msg2 ? <p className="px-6 pb-6">{card.msg2}</p> : ""}
             </div>
           </li>
         );
