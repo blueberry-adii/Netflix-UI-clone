@@ -6,9 +6,7 @@ A fully responsive Netflix homepage UI clone built using **React** and **Tailwin
 
 ## 🚀 Demo
 
-🌐 [Live Preview](https://netlfix-clone.netlify.app/)
-
-📸 See Screenshots in the `/screenshots` folder
+🌐 [Live Preview](https://net-lfix-clone.netlify.app/)
 
 ---
 
@@ -33,22 +31,14 @@ A fully responsive Netflix homepage UI clone built using **React** and **Tailwin
 
 ---
 
-## 📸 Preview
-
-| Desktop         | Mobile         |
-| --------------- | -------------- |
-| ![Desktop UI]() | ![Mobile UI]() |
-
----
-
 ## 🛠️ Installation & Usage
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/your-username/netflix-ui-clone.git
+git clone https://github.com/blueberry-adii/Netflix-UI-clone.git
 
 # 2. Navigate into it
-cd netflix-ui-clone
+cd Netflix-UI-clone
 
 # 3. Install dependencies
 npm install
