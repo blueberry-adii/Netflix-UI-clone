@@ -77,7 +77,7 @@ function App() {
             <Button textContent="Sign In" small={true}></Button>
           </div>
         </header>
-        <main className="w-full px-8 h-[450px] min-[960px]:h-[500px] min-[1280px]:h-[600px] z-20 flex flex-col items-center justify-center gap-4 max-[960px]:gap-2">
+        <main className="w-full relative px-8 h-[450px] min-[960px]:h-[500px] min-[1280px]:h-[600px] z-20 flex flex-col items-center justify-center gap-4 max-[960px]:gap-2">
           <h1 className="text-6xl max-[1280px]:text-[40px] max-[960px]:text-[32px] font-sans font-bold max-w-[700px] max-[1280px]:max-w-[500px] max-[960px]:max-w-[450px] text-center">
             Unlimited movies, TV shows and more
           </h1>
@@ -92,6 +92,10 @@ function App() {
             <Input id="email" type="email" placeholder="Email Address"></Input>
             <Button textContent="Get Started" svg={true}></Button>
           </form>
+          <div className="absolute bg-yellow-100/20 text-2xl max-[1280px]:text-lg max-[700px]:text-sm max-[350px]:text-xs z-200 w-full max-w-[1920px] bottom-0 left-1/2 -translate-x-1/2 text-center">
+            ⚠️ This is a Netflix UI clone for educational purposes only. Not
+            affiliated with Netflix.
+          </div>
         </main>
         <div className="absolute w-full h-48 inset-0 bg-gradient-to-b from-black/90 to-transparent z-10"></div>
         <div className="absolute w-full inset-0 bg-gradient-to-t from-black/90 to-black/15 z-10"></div>
